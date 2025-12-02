@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	printf("enter the value");
+	scanf("%d", &n);
+	switch(n)
+	{
+		case 1:printf("january");break;
+		case 2:printf("february");break;
+		case 3:printf("march");break;
+		case 4:printf("april");break;
+		case 5:printf("may");break;
+	}
+	return 0;
+}
