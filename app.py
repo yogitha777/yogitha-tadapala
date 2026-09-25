@@ -42,26 +42,32 @@ def clear_chat_history() -> None:
 def main() -> None:
     init_session_state()
 
-    # Custom styling for student edition presentation
+    # Custom styling for student edition presentation (dark theme compatible)
     st.markdown(
         """
         <style>
         .student-header {
             font-size: 2.1rem;
             font-weight: 700;
-            color: #1E3A8A;
+            color: #60a5fa;
             margin-bottom: 0.2rem;
         }
         .student-caption {
             font-size: 1.05rem;
-            color: #4B5563;
+            color: #94a3b8;
             margin-bottom: 0.8rem;
         }
-        .stMetric {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
+        div[data-testid="stMetric"], .stMetric {
+            background-color: #262730;
+            border: 1px solid #3d4150;
             border-radius: 8px;
-            padding: 8px;
+            padding: 10px 14px;
+        }
+        div[data-testid="stMetric"] label, .stMetric label, [data-testid="stMetricLabel"] {
+            color: #94a3b8 !important;
+        }
+        div[data-testid="stMetric"] [data-testid="stMetricValue"], .stMetric [data-testid="stMetricValue"] {
+            color: #f8fafc !important;
         }
         </style>
         """,
